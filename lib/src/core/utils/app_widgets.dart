@@ -17,9 +17,7 @@ Widget defaultTextFormField({
       keyboardType: keyboardType,
       decoration: InputDecoration(
         hintText: hint,
-
         hintStyle: const TextStyle(),
-
         prefixIcon: Icon(
           suffixIcon,
           color: HexColor('#a3a3a3'),
@@ -30,23 +28,11 @@ Widget defaultTextFormField({
           color: HexColor('#a3a3a3'),
           size: 32.0,
         ),
-        // enabledBorder: OutlineInputBorder(
-        //   borderSide: BorderSide(
-        //     width: .7,
-        //     color: AppColors.primary,
-        //   ),
-        //   borderRadius: const BorderRadius.all(
-        //     Radius.circular(15),
-        //   ),
-        // ),
-        // focusedBorder: OutlineInputBorder(
-        //   borderSide: BorderSide(
-        //     width: 1.5,
-        //     color: AppColors.primary,
-        //   ),
-        //   borderRadius: const BorderRadius.all(
-        //     Radius.circular(15),
-        //   ),
-        // ),
       ),
     );
+Widget HorizentalSizedBox() => const SizedBox(
+  width: 20.0,
+);
+Widget VerticalSizedBox() => const SizedBox(
+  height: 20.0,
+);

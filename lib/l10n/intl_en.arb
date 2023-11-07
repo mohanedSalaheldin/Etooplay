@@ -1,4 +1,9 @@
 {
-    "login": "Login",
-    "email":"Email"
+    "login_title": "Login",
+    "email":"Email",
+    "password":"Password",
+    "login":"Login",
+    "or":"or",
+    "or_login_with_google":"Or login using Google",
+    "dont_have_an_account":"Don't have an account?"
 }

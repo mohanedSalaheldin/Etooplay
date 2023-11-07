@@ -30,6 +30,7 @@ ThemeData lightTheme = ThemeData(
       ),
     ),
   ),
+
   appBarTheme: const AppBarTheme(
     color: Colors.transparent,
     elevation: 0.0,
@@ -39,6 +40,11 @@ ThemeData lightTheme = ThemeData(
       fontSize: 34,
       fontWeight: FontWeight.bold,
       color: AppColors.primary,
+    ),
+    bodySmall: const TextStyle(
+      fontSize: 24.0,
+      fontWeight: FontWeight.w400,
+      color: Colors.white,
     ),
   ),
 );

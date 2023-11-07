@@ -51,10 +51,10 @@ class S {
   }
 
   /// `Login`
-  String get login {
+  String get login_title {
     return Intl.message(
       'Login',
-      name: 'login',
+      name: 'login_title',
       desc: '',
       args: [],
     );
@@ -65,6 +65,56 @@ class S {
     return Intl.message(
       'Email',
       name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `or`
+  String get or {
+    return Intl.message(
+      'or',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or login using Google`
+  String get or_login_with_google {
+    return Intl.message(
+      'Or login using Google',
+      name: 'or_login_with_google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get dont_have_an_account {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'dont_have_an_account',
       desc: '',
       args: [],
     );
