@@ -7,8 +7,10 @@ Widget defaultTextFormField({
   required TextInputType keyboardType,
   required IconData suffixIcon,
   IconData? prefixIcon,
+  bool ispassword =false,
 }) =>
     TextFormField(
+      obscureText: ispassword,
       style: const TextStyle(
         fontSize: 22,
         fontWeight: FontWeight.w500,

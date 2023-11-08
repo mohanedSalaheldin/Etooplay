@@ -33,6 +33,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 VerticalSizedBox(),
                 defaultTextFormField(
+                  ispassword: true,
                   hint: S.of(context).password,
                   keyboardType: TextInputType.emailAddress,
                   suffixIcon: Icons.lock_open,

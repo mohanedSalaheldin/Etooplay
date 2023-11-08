@@ -1,4 +1,5 @@
 import 'package:etooplay/generated/l10n.dart';
+import 'package:etooplay/src/config/routes/routes.dart';
 import 'package:etooplay/src/config/themes/themes.dart';
 import 'package:etooplay/src/features/login/presentation/pages/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,8 @@ class App extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      onGenerateRoute: RoutesManager.onGenerateRoute,
+      // home: const LoginScreen(),
       theme: lightTheme,
     );
   }
