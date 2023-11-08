@@ -1,4 +1,5 @@
 import 'package:etooplay/generated/l10n.dart';
+import 'package:etooplay/src/config/routes/routes.dart';
 import 'package:etooplay/src/core/utils/app_assets.dart';
 import 'package:etooplay/src/core/utils/app_colors.dart';
 import 'package:etooplay/src/core/utils/app_widgets.dart';
@@ -10,6 +11,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var emailController = TextEditingController();
+    var passwordController = TextEditingController();
     return Scaffold(
       appBar: loginScreenAppBar,
       body: Padding(
@@ -24,48 +27,37 @@ class LoginScreen extends StatelessWidget {
                   S.of(context).login_title,
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
-                VerticalSizedBox(),
-                VerticalSizedBox(),
+                verticalSizedBox(),
+                verticalSizedBox(),
                 defaultTextFormField(
+                  controller: emailController,
                   hint: S.of(context).email,
                   keyboardType: TextInputType.emailAddress,
                   suffixIcon: Icons.email_outlined,
                 ),
-                VerticalSizedBox(),
+                verticalSizedBox(),
                 defaultTextFormField(
+                  controller: passwordController,
                   ispassword: true,
                   hint: S.of(context).password,
                   keyboardType: TextInputType.emailAddress,
                   suffixIcon: Icons.lock_open,
                 ),
-                VerticalSizedBox(),
-                VerticalSizedBox(),
-                Container(
-                  height: 70.0,
-                  width: double.infinity,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      15.0,
-                    ),
-                  ),
-                  child: MaterialButton(
-                    onPressed: () {},
-                    color: AppColors.primary,
-                    child: Text(
-                      S.of(context).login,
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
+                verticalSizedBox(),
+                verticalSizedBox(),
+                defaultButton(
+                  onpressed: () {},
+                  content: Text(
+                    S.of(context).login,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ),
-                VerticalSizedBox(),
+                verticalSizedBox(),
                 Center(
                   child: Text(
                     S.of(context).or,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: Colors.grey[600],
-                          // fontSize: 24.0,
-                          // fontWeight: FontWeight.w400,
                         ),
                   ),
                 ),
@@ -82,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                           AssetsManager.google,
                         ),
                       ),
-                      HorizentalSizedBox(),
+                      horizentalSizedBox(),
                       Text(
                         S.of(context).or_login_with_google,
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -93,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                VerticalSizedBox(),
+                verticalSizedBox(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -108,9 +100,15 @@ class LoginScreen extends StatelessWidget {
                       width: 5.0,
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, Routes.registerRoute);
+                      },
                       child: Text(
-                        S.of(context).login,
+                        S.of(context).register,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: AppColors.primary,
+                              fontSize: 20.0,
+                            ),
                       ),
                     ),
                   ],
