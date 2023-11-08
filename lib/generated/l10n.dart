@@ -80,11 +80,31 @@ class S {
     );
   }
 
+  /// `Confirm password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Login`
   String get login {
     return Intl.message(
       'Login',
       name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
       desc: '',
       args: [],
     );
@@ -115,6 +135,116 @@ class S {
     return Intl.message(
       'Don\'t have an account?',
       name: 'dont_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have an account?`
+  String get you_have_an_account {
+    return Intl.message(
+      'You have an account?',
+      name: 'you_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create free account`
+  String get create_afree_account {
+    return Intl.message(
+      'Create free account',
+      name: 'create_afree_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue, create account...`
+  String get Continue_create_your_account {
+    return Intl.message(
+      'Continue, create account...',
+      name: 'Continue_create_your_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Client`
+  String get client {
+    return Intl.message(
+      'Client',
+      name: 'client',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service Providor`
+  String get service_providor {
+    return Intl.message(
+      'Service Providor',
+      name: 'service_providor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First name`
+  String get first_name {
+    return Intl.message(
+      'First name',
+      name: 'first_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last name`
+  String get last_name {
+    return Intl.message(
+      'Last name',
+      name: 'last_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get gender {
+    return Intl.message(
+      'Gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
       desc: '',
       args: [],
     );

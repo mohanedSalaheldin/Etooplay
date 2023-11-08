@@ -1,7 +1,6 @@
 import 'package:etooplay/generated/l10n.dart';
 import 'package:etooplay/src/config/routes/routes.dart';
 import 'package:etooplay/src/config/themes/themes.dart';
-import 'package:etooplay/src/features/login/presentation/pages/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

@@ -4,9 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 
 ThemeData lightTheme = ThemeData(
   fontFamily: 'Cairo',
-  // iconTheme: IconThemeData(
-
-  // ),
+  
 
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
@@ -33,12 +31,16 @@ ThemeData lightTheme = ThemeData(
   ),
 
   appBarTheme: const AppBarTheme(
+    titleSpacing: 16.0,
     color: Colors.transparent,
+    iconTheme: IconThemeData(
+      color: Colors.black,
+    ),
     elevation: 0.0,
   ),
   textTheme: TextTheme(
     bodyLarge: TextStyle(
-      fontSize: 34,
+      fontSize: 30,
       fontWeight: FontWeight.bold,
       color: AppColors.primary,
     ),
@@ -46,6 +48,11 @@ ThemeData lightTheme = ThemeData(
       fontSize: 24.0,
       fontWeight: FontWeight.w400,
       color: Colors.white,
+    ),
+    bodyMedium:  const TextStyle(
+      fontSize: 22.0,
+      fontWeight: FontWeight.w400,
+      color: Colors.black,
     ),
   ),
 );
