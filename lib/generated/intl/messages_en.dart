@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "service_providor":
             MessageLookupByLibrary.simpleMessage("Service Providor"),
+        "show_password": MessageLookupByLibrary.simpleMessage("Show password"),
         "you_have_an_account":
             MessageLookupByLibrary.simpleMessage("You have an account?")
       };

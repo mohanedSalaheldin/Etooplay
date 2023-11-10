@@ -46,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "register": MessageLookupByLibrary.simpleMessage("إنشاء"),
         "service_providor": MessageLookupByLibrary.simpleMessage("مزود خدمة"),
+        "show_password":
+            MessageLookupByLibrary.simpleMessage("إظهار كلمة المرور"),
         "you_have_an_account":
             MessageLookupByLibrary.simpleMessage("لديك حساب؟")
       };

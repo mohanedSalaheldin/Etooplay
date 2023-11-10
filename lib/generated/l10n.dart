@@ -110,6 +110,16 @@ class S {
     );
   }
 
+  /// `Show password`
+  String get show_password {
+    return Intl.message(
+      'Show password',
+      name: 'show_password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `or`
   String get or {
     return Intl.message(

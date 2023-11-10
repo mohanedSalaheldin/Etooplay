@@ -6,9 +6,10 @@ import 'package:hexcolor/hexcolor.dart';
 Widget defaultTextFormField({
   required String? hint,
   required TextInputType keyboardType,
-  required IconData? suffixIcon,
+  required IconData? prefixIcon ,
   required controller,
-  IconData? prefixIcon,
+  IconData? suffixIcon,
+  void Function()? suffixIconOnpressed,
   bool ispassword = false,
 }) =>
     SizedBox(
@@ -26,14 +27,17 @@ Widget defaultTextFormField({
           hintText: hint,
           hintStyle: const TextStyle(),
           prefixIcon: Icon(
-            suffixIcon,
-            color: HexColor('#a3a3a3'),
-            size: 32.0,
-          ),
-          suffixIcon: Icon(
             prefixIcon,
             color: HexColor('#a3a3a3'),
             size: 32.0,
+          ),
+          suffixIcon: IconButton(
+            onPressed: suffixIconOnpressed,
+            icon: Icon(
+              suffixIcon,
+              color: HexColor('#a3a3a3'),
+              size: 32.0,
+            ),
           ),
         ),
       ),

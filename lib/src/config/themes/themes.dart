@@ -4,7 +4,8 @@ import 'package:hexcolor/hexcolor.dart';
 
 ThemeData lightTheme = ThemeData(
   fontFamily: 'Cairo',
-  
+  primaryColor: AppColors.primary,
+  // primarySwatch: MaterialColor(primary, swatch),
 
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
