@@ -139,7 +139,7 @@ class RegisterScreen extends StatelessWidget {
                           controller: firstNameController,
                           hint: null,
                           keyboardType: TextInputType.emailAddress,
-                          suffixIcon: null,
+                          prefixIcon: null,
                         ),
                       ),
                       const SizedBox(
@@ -150,7 +150,7 @@ class RegisterScreen extends StatelessWidget {
                           controller: lastNameController,
                           hint: null,
                           keyboardType: TextInputType.emailAddress,
-                          suffixIcon: null,
+                          prefixIcon: null,
                         ),
                       ),
                     ],

@@ -19,83 +19,116 @@ class Register2Screen extends StatelessWidget {
       child: BlocConsumer<RegisterCubit, RegisterState>(
         listener: (context, state) {},
         builder: (context, state) {
-          // var cubit = RegisterCubit.get(context);
+          var cubit = RegisterCubit.get(context);
           return Scaffold(
             appBar: AppBar(
                 // titleSpacing: 0.0,
                 ),
             body: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  verticalSizedBox(),
-                  verticalSizedBox(),
-                  Text(
-                    S.of(context).Continue_create_your_account,
-                    style: Theme.of(context).textTheme.bodyLarge,
-                  ),
-                  verticalSizedBox(),
-                  defaultTextFormField(
-                    controller: emailController,
-                    hint: S.of(context).email,
-                    keyboardType: TextInputType.emailAddress,
-                    suffixIcon: Icons.email_outlined,
-                  ),
-                  verticalSizedBox(),
-                  defaultTextFormField(
-                    controller: passwordController,
-                    ispassword: true,
-                    hint: S.of(context).password,
-                    keyboardType: TextInputType.emailAddress,
-                    suffixIcon: Icons.lock_open,
-                  ),
-                  verticalSizedBox(),
-                  defaultTextFormField(
-                    controller: passwordAgainController,
-                    ispassword: true,
-                    hint: S.of(context).confirm_password,
-                    keyboardType: TextInputType.emailAddress,
-                    suffixIcon: Icons.lock_open,
-                  ),
-                  verticalSizedBox(),
-                  verticalSizedBox(),
-                  defaultButton(
-                    onpressed: () {},
-                    content: Text(
-                      S.of(context).register,
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                  ),
-                  verticalSizedBox(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+              child: Center(
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      verticalSizedBox(),
+                      verticalSizedBox(),
                       Text(
-                        S.of(context).you_have_an_account,
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: Colors.grey[600],
-                              fontSize: 20.0,
-                            ),
+                        S.of(context).Continue_create_your_account,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
-                      const SizedBox(
-                        width: 5.0,
+                      verticalSizedBox(),
+                      defaultTextFormField(
+                        controller: emailController,
+                        hint: S.of(context).email,
+                        keyboardType: TextInputType.emailAddress,
+                        prefixIcon: Icons.email_outlined,
                       ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, Routes.loginRoute);
-                        },
-                        child: Text(
-                          S.of(context).login,
-                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: AppColors.primary,
-                              fontSize: 20.0,
-                            ),
+                      verticalSizedBox(),
+                      defaultTextFormField(
+                        controller: passwordController,
+                        ispassword: !cubit.isPasswordShown,
+                        hint: S.of(context).password,
+                        keyboardType: TextInputType.emailAddress,
+                        prefixIcon: Icons.lock_open,
+                      ),
+                      verticalSizedBox(),
+                      defaultTextFormField(
+                        controller: passwordAgainController,
+                        ispassword: !cubit.isPasswordShown,
+                        hint: S.of(context).confirm_password,
+                        keyboardType: TextInputType.emailAddress,
+                        prefixIcon: Icons.lock_open,
+                      ),
+                      verticalSizedBox(),
+                      Row(
+                        children: [
+                          Checkbox(
+                            activeColor: AppColors.primary,
+
+                            // fillColor: MaterialStatePropertyAll(AppColors.primary),
+                            value: !cubit.isPasswordShown,
+                            onChanged: (bool? value) {
+                              cubit.changePasworsVisibility();
+                            },
+                          ),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          Text(
+                            S.of(context).show_password,
+                            style:
+                                Theme.of(context).textTheme.bodySmall?.copyWith(
+                                      color: AppColors.primary,
+                                      fontSize: 20.0,
+                                    ),
+                          ),
+                        ],
+                      ),
+                      verticalSizedBox(),
+                      verticalSizedBox(),
+                      defaultButton(
+                        onpressed: () {},
+                        content: Text(
+                          S.of(context).register,
+                          style: Theme.of(context).textTheme.bodySmall,
                         ),
+                      ),
+                      verticalSizedBox(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            S.of(context).you_have_an_account,
+                            style:
+                                Theme.of(context).textTheme.bodySmall?.copyWith(
+                                      color: Colors.grey[600],
+                                      fontSize: 20.0,
+                                    ),
+                          ),
+                          const SizedBox(
+                            width: 5.0,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, Routes.loginRoute);
+                            },
+                            child: Text(
+                              S.of(context).login,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
+                                  ?.copyWith(
+                                    color: AppColors.primary,
+                                    fontSize: 20.0,
+                                  ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
+                ),
               ),
             ),
           );
